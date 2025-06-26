@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.PositionsController.GetAll">
+            <summary>
+            Obtiene todas las posiciones existentes.
+            </summary>
+            <returns>Lista de posiciones</returns>
+            <response code="200">Lista obtenida correctamente</response>
+            <response code="401">Falta API Key</response>
+            <response code="403">API Key inválida</response>
+        </member>
+        <member name="M:WebApi.Controllers.PositionsController.GetById(System.Int32)">
+            <summary>
+            Obtiene una posición por su ID.
+            </summary>
+            <param name="id">ID de la posición</param>
+            <returns>Detalles de la posición</returns>
+            <response code="200">Posición encontrada</response>
+            <response code="404">No existe la posición</response>
+            <response code="401">Falta API Key</response>
+            <response code="403">API Key inválida</response>
+        </member>
+        <member name="M:WebApi.Controllers.PositionsController.Create(WebApi.DTOs.PositionDTO)">
+            <summary>
+            Crea una nueva posición.
+            </summary>
+            <param name="dto">Datos de la posición</param>
+            <returns>Posición creada</returns>
+            <response code="201">Creado exitosamente</response>
+            <response code="400">Error de validación</response>
+            <response code="401">Falta API Key</response>
+            <response code="403">API Key inválida</response>
+        </member>
+        <member name="M:WebApi.Controllers.PositionsController.Update(System.Int32,WebApi.DTOs.PositionDTO)">
+            <summary>
+            Actualiza una posición existente.
+            </summary>
+            <param name="id">ID de la posición</param>
+            <param name="dto">Datos actualizados</param>
+            <returns>Sin contenido si fue exitoso</returns>
+            <response code="204">Actualizado correctamente</response>
+            <response code="404">No se encontró la posición</response>
+            <response code="400">Error de validación</response>
+            <response code="401">Falta API Key</response>
+            <response code="403">API Key inválida</response>
+        </member>
+        <member name="M:WebApi.Controllers.PositionsController.Delete(System.Int32)">
+            <summary>
+            Elimina una posición por su ID.
+            </summary>
+            <param name="id">ID de la posición</param>
+            <returns>Sin contenido si fue exitoso</returns>
+            <response code="204">Eliminado correctamente</response>
+            <response code="404">No se encontró la posición</response>
+            <response code="401">Falta API Key</response>
+            <response code="403">API Key inválida</response>
+        </member>
+        <member name="M:WebApi.Controllers.PositionsController.GetAll(WebApi.DTOs.Filters.PositionFilter)">
+            <summary>
+            Obtiene una lista de posiciones aplicando filtros opcionales como estado, ubicación y paginación.
+            </summary>
+            <param name="filter">
+            Filtros de búsqueda, incluyendo estado (Status), ubicación (Location),
+            número de página (Page) y tamaño de página (PageSize).
+            </param>
+            <returns>Lista paginada de posiciones que coinciden con los criterios de búsqueda.</returns>
+            <response code="200">Lista obtenida correctamente</response>
+            <response code="400">Parámetros de búsqueda inválidos</response>
+            <response code="401">Falta API Key</response>
+            <response code="403">API Key inválida</response>
+        </member>
+        <member name="T:WebApi.DTOs.PositionDTO">
+            <summary>
+            Modelo de datos para una posición laboral.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.Id">
+            <summary>
+            Identificador del puesto.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.Title">
+            <summary>
+            Título del puesto. Máximo 100 caracteres.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.Description">
+            <summary>
+            Descripción detallada del puesto. Máximo 1000 caracteres.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.Location">
+            <summary>
+            Ubicación del puesto.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.Status">
+            <summary>
+            Estado de la posición: draft, open, closed o archived.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.RecruiterId">
+            <summary>
+            Identificador del reclutador asignado.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.DepartmentId">
+            <summary>
+            Identificador del departamento correspondiente.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.Budget">
+            <summary>
+            Presupuesto asignado a la posición.
+            </summary>
+        </member>
+        <member name="P:WebApi.DTOs.PositionDTO.ClosingDate">
+            <summary>
+            Fecha límite para aplicar al puesto. Opcional.
+            </summary>
+        </member>
+    </members>
+</doc>
