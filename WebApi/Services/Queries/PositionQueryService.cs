@@ -1,7 +1,6 @@
 ﻿using WebApi.DTOs;
 using WebApi.DTOs.Filters;
 using WebApi.Models;
-using WebApi.Repositories;
 using WebApi.Repositories.Interfaces;
 
 namespace WebApi.Services.Queries

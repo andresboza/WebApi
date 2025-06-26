@@ -134,7 +134,7 @@ namespace WebApi.Tests.Controllers
         {
             _mockQuery.Setup(x => x.GetAllAsync()).ThrowsAsync(new Exception("Error inesperado"));
             Func<Task> act = async () => await _controller.GetAll();
-            // este assert debe  verificar que al llamar al controlador se lance la excepción que es atrapada por el middleware global
+            // este assert debe   verificar que al llamar al controlador se lance la excepción que es atrapada por el middleware global
             await act.Should().ThrowAsync<Exception>().WithMessage("Error inesperado");
         }
     }

@@ -6,7 +6,7 @@
     public class PositionDTO
     {
         /// <summary>
-        /// Identificador del puesto.
+        /// Id del puesto.
         /// </summary>
         public int Id { get; set; }
         /// <summary>

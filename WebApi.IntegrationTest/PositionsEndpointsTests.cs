@@ -30,11 +30,11 @@ namespace WebApi.IntegrationTests
 
         public async Task InitializeAsync()
         {
-            // 1. Obtén la IConfiguration que usa tu API
+            // obtenemos la configuración que usa el api
             var config = _factory.Services.GetRequiredService<IConfiguration>();
             _connectionString = config.GetConnectionString("OracleDb");
 
-            // 2. Conéctate a Oracle y trunca la tabla
+            // Me conecto a oracle y trunco la tabla
             await using var conn = new OracleConnection(_connectionString);
             await conn.OpenAsync();
             await using var cmd = conn.CreateCommand();
@@ -55,10 +55,8 @@ namespace WebApi.IntegrationTests
         public async Task GetAll_InitiallyEmpty_Returns200AndEmptyList()
         {
             AddApiKey("123456SECRET");
-
             var resp = await _client.GetAsync("/api/Positions/GetAll");
             resp.StatusCode.Should().Be(HttpStatusCode.OK);
-
             var list = await resp.Content.ReadFromJsonAsync<PositionDTO[]>();
             list.Should().NotBeNull().And.BeEmpty();
         }
@@ -83,7 +81,6 @@ namespace WebApi.IntegrationTests
 
             var createResp = await _client.PostAsJsonAsync("/api/Positions/Create", createDto);
             createResp.StatusCode.Should().Be(HttpStatusCode.Created);
-
             var created = await createResp.Content.ReadFromJsonAsync<PositionDTO>();
             created.Should().NotBeNull();
             created!.Id.Should().BeGreaterThan(0);

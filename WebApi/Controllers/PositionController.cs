@@ -23,12 +23,12 @@ namespace WebApi.Controllers
         }
 
         /// <summary>
-        /// Obtiene todas las posiciones existentes.
+        /// Obtiene todas las posiciones.
         /// </summary>
         /// <returns>Lista de posiciones</returns>
         /// <response code="200">Lista obtenida correctamente</response>
-        /// <response code="401">Falta API Key</response>
-        /// <response code="403">API Key inválida</response>
+        /// <response code="401">Falta api key</response>
+        /// <response code="403">Api key inválida</response>
         [HttpGet("GetAll")]
         [SwaggerOperation(Summary = "Obtiene todas las posiciones existentes", OperationId = "GetAllPositions")]
         [ProducesResponseType(typeof(IEnumerable<PositionDTO>), 200)]
@@ -41,14 +41,14 @@ namespace WebApi.Controllers
         }
 
         /// <summary>
-        /// Obtiene una posición por su ID.
+        /// Obtiene una posición por id.
         /// </summary>
-        /// <param name="id">ID de la posición</param>
+        /// <param name="id">id de la posición</param>
         /// <returns>Detalles de la posición</returns>
         /// <response code="200">Posición encontrada</response>
         /// <response code="404">No existe la posición</response>
-        /// <response code="401">Falta API Key</response>
-        /// <response code="403">API Key inválida</response>
+        /// <response code="401">Falta api key</response>
+        /// <response code="403">Api key inválida</response>
         [HttpGet("Get/{id}")]
         [SwaggerOperation(Summary = "Obtiene la posición a la que pertenece el id que viene por parámetro", OperationId = "GetPositionById")]
         [ProducesResponseType(typeof(PositionDTO), 200)]
@@ -69,8 +69,8 @@ namespace WebApi.Controllers
         /// <returns>Posición creada</returns>
         /// <response code="201">Creado exitosamente</response>
         /// <response code="400">Error de validación</response>
-        /// <response code="401">Falta API Key</response>
-        /// <response code="403">API Key inválida</response>
+        /// <response code="401">Falta api key</response>
+        /// <response code="403">Api key inválida</response>
         [HttpPost("Create")]
         [SwaggerOperation(Summary = "Inserta una nueva posición", OperationId = "AddPosition")]
         [ProducesResponseType(typeof(PositionDTO), 201)]
@@ -95,8 +95,8 @@ namespace WebApi.Controllers
         /// <response code="204">Actualizado correctamente</response>
         /// <response code="404">No se encontró la posición</response>
         /// <response code="400">Error de validación</response>
-        /// <response code="401">Falta API Key</response>
-        /// <response code="403">API Key inválida</response>
+        /// <response code="401">Falta api key</response>
+        /// <response code="403">Api key inválida</response>
         [HttpPut("Update/{id}")]
         [SwaggerOperation(Summary = "Actualiza la posición a la cual pertenece el id que viene por parámetro", OperationId = "UpdatePosition")]
         [ProducesResponseType(204)]
@@ -118,8 +118,8 @@ namespace WebApi.Controllers
         /// <returns>Sin contenido si fue exitoso</returns>
         /// <response code="204">Eliminado correctamente</response>
         /// <response code="404">No se encontró la posición</response>
-        /// <response code="401">Falta API Key</response>
-        /// <response code="403">API Key inválida</response>
+        /// <response code="401">Falta api key</response>
+        /// <response code="403">Api key inválida</response>
         [HttpDelete("Delete/{id}")]
         [SwaggerOperation(Summary = "Elimina la posición a la cual pertenece el id que viene por parámetro", OperationId = "DeletePosition")]
         [ProducesResponseType(204)]
@@ -134,17 +134,17 @@ namespace WebApi.Controllers
         }
 
         /// <summary>
-        /// Obtiene una lista de posiciones aplicando filtros opcionales como estado, ubicación y paginación.
+        /// Se obtiene la lista de posiciones aplicando el filtro, ya sea por estado, ubicación y paginación.
         /// </summary>
         /// <param name="filter">
-        /// Filtros de búsqueda, incluyendo estado (Status), ubicación (Location),
+        /// Filtro de búsqueda, se incluyen estado (Status), ubicación (Location),
         /// número de página (Page) y tamaño de página (PageSize).
         /// </param>
         /// <returns>Lista paginada de posiciones que coinciden con los criterios de búsqueda.</returns>
         /// <response code="200">Lista obtenida correctamente</response>
         /// <response code="400">Parámetros de búsqueda inválidos</response>
-        /// <response code="401">Falta API Key</response>
-        /// <response code="403">API Key inválida</response>
+        /// <response code="401">Falta api key</response>
+        /// <response code="403">Api key inválida</response>
         [HttpGet("Filter")]
         [SwaggerOperation(Summary = "Obtiene posiciones filtradas", OperationId = "GetFilteredPositions")]
         [ProducesResponseType(typeof(IEnumerable<PositionDTO>), 200)]

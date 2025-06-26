@@ -12,7 +12,7 @@ using WebApi.Validators;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-//Se agrega Api Key en swagger
+// Se agrega Api Key en swagger
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen(c =>
         Title = "WebApi",
         Version = "v1"
     });
-    //definimos la seguridad con API Key
+    // aquí se define la seguridad con API Key
     c.AddSecurityDefinition("ApiKey", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Description = "Clave de autenticación usando encabezado 'X-Api-Key'. Ej: X-Api-Key: {clave}",
@@ -29,7 +29,7 @@ builder.Services.AddSwaggerGen(c =>
         In = Microsoft.OpenApi.Models.ParameterLocation.Header,
         Scheme = "ApiKeyScheme"
     });
-    //se agrega la seguridad global
+    // En esta sección se agrega la seguridad global
     c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
     {
         {
@@ -45,7 +45,7 @@ builder.Services.AddSwaggerGen(c =>
             Array.Empty<string>()
         }
     });
-    //Comentarios XML
+    // Acá se agregan los comentarios xml
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
     c.IncludeXmlComments(xmlPath);
@@ -72,5 +72,5 @@ app.UseAuthorization();
 app.MapControllers();
 app.Run();
 
-//esta linea va a permitir que los tests usen WebApplicationFactory<Program> para pruebas de integración
+//esta linea va a permitir que los tests usen WebApplicationFactory<Program> para las pruebas de integración
 public partial class Program { }
