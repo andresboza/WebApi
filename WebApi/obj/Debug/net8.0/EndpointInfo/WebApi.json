@@ -43,7 +43,7 @@
             }
           },
           "401": {
-            "description": "Falta API Key",
+            "description": "Falta api key",
             "content": {
               "text/plain": {
                 "schema": {
@@ -63,7 +63,7 @@
             }
           },
           "403": {
-            "description": "API Key inválida",
+            "description": "Api key inválida",
             "content": {
               "text/plain": {
                 "schema": {
@@ -96,7 +96,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID de la posición",
+            "description": "id de la posición",
             "required": true,
             "schema": {
               "type": "integer",
@@ -146,7 +146,7 @@
             }
           },
           "401": {
-            "description": "Falta API Key",
+            "description": "Falta api key",
             "content": {
               "text/plain": {
                 "schema": {
@@ -166,7 +166,7 @@
             }
           },
           "403": {
-            "description": "API Key inválida",
+            "description": "Api key inválida",
             "content": {
               "text/plain": {
                 "schema": {
@@ -257,7 +257,7 @@
             }
           },
           "401": {
-            "description": "Falta API Key",
+            "description": "Falta api key",
             "content": {
               "text/plain": {
                 "schema": {
@@ -277,7 +277,7 @@
             }
           },
           "403": {
-            "description": "API Key inválida",
+            "description": "Api key inválida",
             "content": {
               "text/plain": {
                 "schema": {
@@ -383,7 +383,7 @@
             }
           },
           "401": {
-            "description": "Falta API Key",
+            "description": "Falta api key",
             "content": {
               "text/plain": {
                 "schema": {
@@ -403,7 +403,7 @@
             }
           },
           "403": {
-            "description": "API Key inválida",
+            "description": "Api key inválida",
             "content": {
               "text/plain": {
                 "schema": {
@@ -469,7 +469,7 @@
             }
           },
           "401": {
-            "description": "Falta API Key",
+            "description": "Falta api key",
             "content": {
               "text/plain": {
                 "schema": {
@@ -489,7 +489,7 @@
             }
           },
           "403": {
-            "description": "API Key inválida",
+            "description": "Api key inválida",
             "content": {
               "text/plain": {
                 "schema": {
@@ -601,10 +601,10 @@
             }
           },
           "401": {
-            "description": "Falta API Key"
+            "description": "Falta api key"
           },
           "403": {
-            "description": "API Key inválida"
+            "description": "Api key inválida"
           }
         }
       }
@@ -617,7 +617,7 @@
         "properties": {
           "id": {
             "type": "integer",
-            "description": "Identificador del puesto.",
+            "description": "Id del puesto.",
             "format": "int32"
           },
           "title": {

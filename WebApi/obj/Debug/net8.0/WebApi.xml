@@ -6,23 +6,23 @@
     <members>
         <member name="M:WebApi.Controllers.PositionsController.GetAll">
             <summary>
-            Obtiene todas las posiciones existentes.
+            Obtiene todas las posiciones.
             </summary>
             <returns>Lista de posiciones</returns>
             <response code="200">Lista obtenida correctamente</response>
-            <response code="401">Falta API Key</response>
-            <response code="403">API Key inválida</response>
+            <response code="401">Falta api key</response>
+            <response code="403">Api key inválida</response>
         </member>
         <member name="M:WebApi.Controllers.PositionsController.GetById(System.Int32)">
             <summary>
-            Obtiene una posición por su ID.
+            Obtiene una posición por id.
             </summary>
-            <param name="id">ID de la posición</param>
+            <param name="id">id de la posición</param>
             <returns>Detalles de la posición</returns>
             <response code="200">Posición encontrada</response>
             <response code="404">No existe la posición</response>
-            <response code="401">Falta API Key</response>
-            <response code="403">API Key inválida</response>
+            <response code="401">Falta api key</response>
+            <response code="403">Api key inválida</response>
         </member>
         <member name="M:WebApi.Controllers.PositionsController.Create(WebApi.DTOs.PositionDTO)">
             <summary>
@@ -32,8 +32,8 @@
             <returns>Posición creada</returns>
             <response code="201">Creado exitosamente</response>
             <response code="400">Error de validación</response>
-            <response code="401">Falta API Key</response>
-            <response code="403">API Key inválida</response>
+            <response code="401">Falta api key</response>
+            <response code="403">Api key inválida</response>
         </member>
         <member name="M:WebApi.Controllers.PositionsController.Update(System.Int32,WebApi.DTOs.PositionDTO)">
             <summary>
@@ -45,8 +45,8 @@
             <response code="204">Actualizado correctamente</response>
             <response code="404">No se encontró la posición</response>
             <response code="400">Error de validación</response>
-            <response code="401">Falta API Key</response>
-            <response code="403">API Key inválida</response>
+            <response code="401">Falta api key</response>
+            <response code="403">Api key inválida</response>
         </member>
         <member name="M:WebApi.Controllers.PositionsController.Delete(System.Int32)">
             <summary>
@@ -56,22 +56,22 @@
             <returns>Sin contenido si fue exitoso</returns>
             <response code="204">Eliminado correctamente</response>
             <response code="404">No se encontró la posición</response>
-            <response code="401">Falta API Key</response>
-            <response code="403">API Key inválida</response>
+            <response code="401">Falta api key</response>
+            <response code="403">Api key inválida</response>
         </member>
         <member name="M:WebApi.Controllers.PositionsController.GetAll(WebApi.DTOs.Filters.PositionFilter)">
             <summary>
-            Obtiene una lista de posiciones aplicando filtros opcionales como estado, ubicación y paginación.
+            Se obtiene la lista de posiciones aplicando el filtro, ya sea por estado, ubicación y paginación.
             </summary>
             <param name="filter">
-            Filtros de búsqueda, incluyendo estado (Status), ubicación (Location),
+            Filtro de búsqueda, se incluyen estado (Status), ubicación (Location),
             número de página (Page) y tamaño de página (PageSize).
             </param>
             <returns>Lista paginada de posiciones que coinciden con los criterios de búsqueda.</returns>
             <response code="200">Lista obtenida correctamente</response>
             <response code="400">Parámetros de búsqueda inválidos</response>
-            <response code="401">Falta API Key</response>
-            <response code="403">API Key inválida</response>
+            <response code="401">Falta api key</response>
+            <response code="403">Api key inválida</response>
         </member>
         <member name="T:WebApi.DTOs.PositionDTO">
             <summary>
@@ -80,7 +80,7 @@
         </member>
         <member name="P:WebApi.DTOs.PositionDTO.Id">
             <summary>
-            Identificador del puesto.
+            Id del puesto.
             </summary>
         </member>
         <member name="P:WebApi.DTOs.PositionDTO.Title">

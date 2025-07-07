@@ -143,3 +143,4 @@ C:\Users\Boza\Sources\WebApiAssessment\WebApi\WebApi\obj\Debug\net8.0\WebApi.xml
 C:\Users\Boza\Sources\WebApiAssessment\WebApi\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\Boza\Sources\WebApiAssessment\WebApi\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\Boza\Sources\WebApiAssessment\WebApi\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\Boza\Sources\WebApiAssessment\WebApi\WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
